@@ -39,7 +39,7 @@ class Queue{
 int main(){
   Queue q;
   int a,b;
-  cout << "\n 1- To Add number" << endl;
+  cout << "1- To Add number" << endl;
   cout << "2- To Delete number" << endl;
   cout << "3- To display" << endl;
   do{
