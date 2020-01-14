@@ -1,8 +1,16 @@
+/*
+Created by: Muhammad Owais
+Subject: Data Structures and Algorithm design
+Submitted to: Mr. Iqbal Latif
+Program: Linear Searching of Array
+*/
+
+
 #include <iostream>
 using namespace std;
 class Linear{
   public: bool present;
-  public: int ans;
+  private: int ans;
   public: int search(int *arr,int x);
 };
 int Linear::search(int *arr, int x){
@@ -15,10 +23,12 @@ int Linear::search(int *arr, int x){
        }
      }
      if(present == 1){
+       present = true;
        return ans;
      }
      else if (present == 0){
-       return -9999;
+       present = false;
+       return 0;
      }
 }
 int main(){
@@ -35,7 +45,7 @@ int main(){
   cin >> x;
   Linear L;
   int b = L.search(a,x);
-  if(b== -9999){
+  if(L.present == 0){
     cout << "Number doesn't exist";
   }
   else{
