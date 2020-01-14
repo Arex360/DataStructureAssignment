@@ -4,9 +4,10 @@ class Binary{
   private: int first;
   private: int last;
   private: int middle;
-  public: int search(int arr[], int n, int x);
+  public: int search(int arr[],int x);
 };
-int Binary::search(int arr[], int n, int x){
+int Binary::search(int arr[],int x){
+    int n = sizeof(arr);
     first = 0;
     last = n - 1;
     middle = (first + last) /2;
@@ -38,7 +39,7 @@ int main(){
     }
     cout << "Enter the number to be searched: ";
     cin >> num;
-    int output =  b.search(Array,m,num);
+    int output =  b.search(Array,num);
     if(output != -9999){
         cout << "Found at index: " << output;
     }
