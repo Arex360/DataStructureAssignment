@@ -3,9 +3,10 @@ using namespace std;
 class Linear{
   public: bool present;
   public: int ans;
-  public: int search(int arr[], int n, int x);
+  public: int search(int *arr,int x);
 };
-int Linear::search(int arr[], int n, int x){
+int Linear::search(int *arr, int x){
+     int n = sizeof(arr);
      for(int i=0;i<n;i++){
        if(arr[i] == x){
          present = true;
@@ -33,7 +34,7 @@ int main(){
   int x;
   cin >> x;
   Linear L;
-  int b = L.search(a, n,x);
+  int b = L.search(a,x);
   if(b== -9999){
     cout << "Number doesn't exist";
   }
