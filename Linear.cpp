@@ -1,10 +1,9 @@
 #include <iostream>
 using namespace std;
 class Linear{
-  public:
-     bool present;
-     int ans;
-     int search(int arr[], int n, int x);
+  public: bool present;
+  public: int ans;
+  public int search(int arr[], int n, int x);
 };
 int Linear::search(int arr[], int n, int x){
      for(int i=0;i<n;i++){
