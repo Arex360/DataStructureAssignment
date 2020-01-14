@@ -2,10 +2,9 @@
 using namespace std;
 int n;
 class Selection{
-   public:
-     void Swap(int *a, int *b);
-     void Sort(int arr[], int size);
-     void Display(int arr[], int size);
+     public: void Swap(int *a, int *b);
+     public: void Sort(int *arr);
+     public: void Display(int *arr);
 };
 void Selection::Swap(int *a, int *b){
     int temp;
@@ -13,7 +12,8 @@ void Selection::Swap(int *a, int *b){
     *a = *b;
     *b = temp;
 }
-void Selection::Sort(int arr[], int size){
+void Selection::Sort(int *arr){
+      int size = sizeof(arr);
       int i, j, Imin_Value;    
     for (i = 0; i < size-1; i++)  
     {   
@@ -24,7 +24,8 @@ void Selection::Sort(int arr[], int size){
         Swap(&arr[Imin_Value], &arr[i]);  
     }  
 }
-void Selection::Display(int arr[], int size){
+void Selection::Display(int *arr){
+   int size = sizeof(arr);
   for(int i = 0;i<size;i++){
     cout << arr[i] << endl;
   }
