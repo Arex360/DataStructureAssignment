@@ -4,9 +4,9 @@ class Binary{
   private: int first;
   private: int last;
   private: int middle;
-  public: int search(int arr[],int x);
+  public: int search(int *arr,int x);
 };
-int Binary::search(int arr[],int x){
+int Binary::search(int *arr,int x){
     int n = sizeof(arr);
     first = 0;
     last = n - 1;
