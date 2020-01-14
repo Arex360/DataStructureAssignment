@@ -23,7 +23,13 @@ void Bubble::Display(int *Arr){
 }
 int main(){
   Bubble b;
-  int A[10] = {1,2,4,6,10,15,19,11,14,13};
+  int n;
+  cout << "Enter the range: ";
+  cin >> n;
+  int A[n];
+  for(int i = 0; i < n ; i++){
+     cin >> A[i];
+  }
   b.Sort(A,10);
   b.Display(A);
 }
