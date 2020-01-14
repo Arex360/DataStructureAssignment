@@ -40,6 +40,6 @@ int main(){
     cout << "Enter number" << i+1;
     cin >> A[i];
   } 
-  s.Sort(A, range);
-  s.Display(A, range);
+  s.Sort(A);
+  s.Display(A);
 }
