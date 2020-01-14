@@ -1,10 +1,11 @@
 #include<iostream>
 using namespace std;
 class Bubble{
-   public: void Sort(int *Arr,int n);
+   public: void Sort(int *Arr);
    public: void Display(int *Arr);
 };
-void Bubble::Sort(int *Arr, int n){
+void Bubble::Sort(int *Arr){
+   int n = sizeof(Arr);
   for(int i = n-2; i >0; i--){
     for(int j = 0; j < i; j++){
       if(Arr[j] > Arr[i]){
